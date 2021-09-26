@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <title>A game about a printer</title>
+
+    <style>
+        canvas {
+            border-style:solid;
+            border-color:#232323;
+            border-width:5px;
+        }
+        #dialogueInput {
+            position: absolute;
+            left: 40px;
+            top: 670px;
+            width: 505px;
+            height: 30px;
+            font-family: 'Times New Roman';
+            font-size: 23px;
+            background-color: #c6bfae;
+            border-style: none;
+            padding: 7px;
+            color: #4d4c49;
+            border-radius: 5px;
+        }
+        #muteButton {
+            position: absolute;
+            left:1178px;
+            top:19px;
+            border-style:none;
+            padding:10px;
+            border-radius:5px;
+            background-color:#c6bfae;
+            color:#4d4c49;
+            font-size:16px;
+            font-family:'Times New Roman';
+        }
+    </style>
+</head>
+
+<!--The setupGame function is called on page load to initialise the canvas and various game elements-->
+<body bgcolor="#000000" onload="setupGame()">
+
+    <!--The canvas is used to draw game graphics.-->
+    <canvas id="canvas" width="1280" height="720"></canvas>
+    <!--An input box to allow the player to enter their name-->
+    <input id="dialogueInput" type="text" placeholder="Enter some text" maxlength="20" />
+    <!--A mute button used to turn background music on/off-->
+    <input id="muteButton" type="button" value="Toggle Audio" onclick="audioButtonClick()" /><br />
+
+    <!--Load all external scripts-->
+    <script src="scripts/rooms.js"></script>
+    <script src="scripts/characters.js"></script>
+    <script src="scripts/interactions.js"></script>
+    <script src="scripts/audio.js"></script>
+    <script src="scripts/dialogueDisplay.js"></script>
+    <script src="scripts/customUI.js"></script>
+    <script src="scripts/game.js"></script>
+
+</body>
+
+</html>
